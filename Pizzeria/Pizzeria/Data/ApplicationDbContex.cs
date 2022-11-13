@@ -9,6 +9,6 @@ namespace Pizzeria.Data
         { 
         }
 
-        public DbSet<Ingredient>? Ingredients { get; set; }
+        public DbSet<Ingredient>? Ingredient { get; set; }
     }
 }

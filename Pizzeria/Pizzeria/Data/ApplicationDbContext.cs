@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PizzeriaShared.Models;
 
 namespace Pizzeria.Data
 {
-    public class ApplicationDbContex : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContex(DbContextOptions options) : base(options) 
+        public ApplicationDbContext(DbContextOptions options) : base(options) 
         { 
         }
 

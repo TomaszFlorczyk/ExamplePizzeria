@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzeriaShared.Models
 {
-    internal class Ingredient
+    public class Ingredient
     {
         public int Id { get; set; }
         public string Name { get; set; }

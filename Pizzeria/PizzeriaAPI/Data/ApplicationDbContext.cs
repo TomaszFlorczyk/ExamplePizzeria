@@ -11,5 +11,6 @@ namespace PizzeriaAPI.Data
         }
 
         public DbSet<Ingredient>? Ingredients { get; set; }
+        public DbSet<Pizza>? Pizzas { get; set;}
     }
 }

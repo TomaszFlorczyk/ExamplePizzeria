@@ -11,10 +11,7 @@ namespace PizzeriaAPI.Data
         }
 
         public DbSet<Ingredient>? Ingredients { get; set; }
-feature/ingredients-model
         public DbSet<Pizza>? Pizzas { get; set; }
-        public DbSet<Ingredient<? Ingredients { get; set; }
         public DbSet<Order>? Orders { get; set; }
-main
     }
 }

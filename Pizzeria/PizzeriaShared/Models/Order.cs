@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PizzeriaShared.Models
 {
-    internal class Order
+    public class Order
     {
+        public int Id { get; set; }
+        public Guid Identifier { get; set; }
+        public DateTime CreateDate { get; set; }
+        public ICollection<Pizza> Pizzas { get; set; }
+
     }
 }

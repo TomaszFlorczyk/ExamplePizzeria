@@ -6,7 +6,7 @@ namespace PizzeriaAPI.Services.Interface
     {
         public Task<Ingredient?> CreateIngredient(string name);
         public Task<Ingredient?> GetIngredientById(int Id);
-        public Task<Ingredient> GetIngredientByName(string name);
+        public Task<Ingredient> GetIngredientByName(string name); 
         public Task<Ingredient> DeleteIngredient(int Id);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PizzeriaAPI.Services.Interface;
 using PizzeriaShared.Models;
+using SQLitePCL;
 using System.Xml.Linq;
 
 namespace PizzeriaAPI.Controllers;
@@ -18,6 +19,15 @@ public class IngredientController : ControllerBase
     {
         _ingredientService = ingredientService;
     }
+
+
+    [HttpGet]
+    public async Task<ActionResult<List<Ingredient>>> GetIngredients()
+    {
+
+        return await _ingredientService.GetIngredients();
+    }
+
 
     [HttpPost]
     public async Task<ActionResult<Ingredient>> CreateIngredient(string name)

@@ -14,6 +14,12 @@ namespace PizzeriaAPI.Services
             _applicationDbContext = applicationDbContext;
         }
 
+
+        public async Task<List<Ingredient>> GetIngredients()
+        {
+            var ingredients = await _applicationDbContext.Ingredients!.ToListAsync();
+            return ingredients;
+        }
         public async Task<Ingredient?> CreateIngredient(string name)
         {
             // string.IsNullOrEmpty
@@ -125,8 +131,5 @@ namespace PizzeriaAPI.Services
             }
         }
 
-        
-
-        
     }
 }

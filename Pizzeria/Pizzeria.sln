@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzeriaShared", "PizzeriaShared\PizzeriaShared.csproj", "{AF716A59-9613-48BE-8E7E-A28A23C4054A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzeriaAPI", "PizzeriaAPI\PizzeriaAPI.csproj", "{7AE5549E-156D-4808-B59C-02A2DCB37928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzeriaAPI", "PizzeriaAPI\PizzeriaAPI.csproj", "{7AE5549E-156D-4808-B59C-02A2DCB37928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzeriaAPI.tests", "PizzeriaAPI.tests\PizzeriaAPI.tests.csproj", "{9B056A44-9F4E-4F26-8841-21F56E118694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7AE5549E-156D-4808-B59C-02A2DCB37928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE5549E-156D-4808-B59C-02A2DCB37928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE5549E-156D-4808-B59C-02A2DCB37928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B056A44-9F4E-4F26-8841-21F56E118694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B056A44-9F4E-4F26-8841-21F56E118694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B056A44-9F4E-4F26-8841-21F56E118694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B056A44-9F4E-4F26-8841-21F56E118694}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

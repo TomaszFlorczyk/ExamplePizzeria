@@ -34,10 +34,24 @@ namespace PizzeriaAPI.Controllers
             return await _pizzaService.GetPizzas();
         }
 
-        [HttpDelete]
-        public async Task<ActionResult<Pizza>> DeletePizza(int Id)
+        [HttpGet("[action]/{name}")]
+        public async Task<ActionResult<Pizza>> GetPizzaByName(string name)
         {
-            var serviceResponse = await _pizzaService.DeletePizza(Id);
+            var serviceResponse = await _pizzaService.GetPizzaByName(name);
+
+            if (serviceResponse == null)
+            {
+                return BadRequest("Something went wrong");
+            }
+            return Ok(serviceResponse);
+        }
+
+
+
+        [HttpDelete]
+        public async Task<ActionResult<Pizza>> DeletePizza(int id)
+        {
+            var serviceResponse = await _pizzaService.DeletePizza(id);
 
             if (serviceResponse == null)
             {

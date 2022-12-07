@@ -1,7 +1,7 @@
-﻿using PizzeriaAPI.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using PizzeriaAPI.Data;
 using PizzeriaAPI.Services.Interface;
 using PizzeriaShared.Models;
-using System.Data.Entity;
 
 namespace PizzeriaAPI.Services
 {
@@ -77,7 +77,7 @@ namespace PizzeriaAPI.Services
 
             try
             {
-                var dbResult = await _applicationDbContext.Pizzas!.FirstOrDefaultAsync(pizza => pizza.Id.Equals(Id));
+                var dbResult = await _applicationDbContext.Pizzas.FirstOrDefaultAsync(pizza => pizza.Id.Equals(Id));
 
                 if (dbResult == null)
                 {

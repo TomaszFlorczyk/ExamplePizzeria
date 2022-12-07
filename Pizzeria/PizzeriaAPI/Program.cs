@@ -18,10 +18,13 @@ builder.Services.AddScoped<IPizzaService, PizzaService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI();
+
+using (var scope = app.Services.CreateScope())
 {
-   app.UseSwagger();
-   app.UseSwaggerUI();
+    var dataContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dataContext.Database.Migrate();
 }
 
 app.UseHttpsRedirection();
